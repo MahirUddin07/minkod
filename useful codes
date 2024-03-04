@@ -1,0 +1,3 @@
+    text_font = pygame.font.Font(None, 50)
+    text_surface = text_font.render('Team Blue:', False, 'blue')
+    screen.blit(text_surface, (100, 50))
