@@ -15,7 +15,7 @@ clock = pygame.time.Clock()
 player1_x, player1_y = 50, 250
 player2_x, player2_y = 1090, 250
 
-def wrap_around(value, size): #Bestämmer gränsen för x och y.
+def wrap_around(value, size): #Funktionen som håller spelarna inom en given storlek.
     return value % size
 
 while True:
@@ -46,7 +46,7 @@ while True:
     if keys[pygame.K_DOWN]:
         player2_y += 5
 
-#Gränsen.
+#Håller spelarna inom gränsen.
     player1_x = wrap_around(player1_x, screen_width)
     player1_y = wrap_around(player1_y, screen_height)
     player2_x = wrap_around(player2_x, screen_width)
@@ -76,3 +76,4 @@ while True:
 
     pygame.display.update()
     clock.tick(90)
+
